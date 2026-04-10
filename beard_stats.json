@@ -1,0 +1,1634 @@
+{
+    "stats": {
+        "with_beard": 44,
+        "without_beard": 281,
+        "errors": 1
+    },
+    "details": [
+        {
+            "image": "235_ParaschivCiprianConstantin.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.6779356002807617
+        },
+        {
+            "image": "325_VulpoiuDorel.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9862062335014343
+        },
+        {
+            "image": "207_MorarLucianIoanTitus.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9709449410438538
+        },
+        {
+            "image": "84_CrusoveanuMarian.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.8798611164093018
+        },
+        {
+            "image": "182_MateiAneta.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.7061959505081177
+        },
+        {
+            "image": "64_CiuntIonel.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9230970144271851
+        },
+        {
+            "image": "145_IancuMariusIonel.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.918641209602356
+        },
+        {
+            "image": "262_PuscasuPetre.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.8886163830757141
+        },
+        {
+            "image": "321_VelcescuFlorinBogdan.JPG",
+            "label": "a person with a beard",
+            "confidence": 0.9670754671096802
+        },
+        {
+            "image": "191_MihalceaRemusGabriel.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.7356942892074585
+        },
+        {
+            "image": "98_EchertAdrian.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.7625850439071655
+        },
+        {
+            "image": "174_LunguRomeoDaniel.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.8454685807228088
+        },
+        {
+            "image": "320_VelaIonMarcel.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9873989820480347
+        },
+        {
+            "image": "152_IonescuTudor.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9932785630226135
+        },
+        {
+            "image": "253_PopaMaricel.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.6928250789642334
+        },
+        {
+            "image": "76_ConstantinescuSergiuMircea.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.8476955890655518
+        },
+        {
+            "image": "304_ToaderElenaLaura.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.7027607560157776
+        },
+        {
+            "image": "282_StancuIonel.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9842345118522644
+        },
+        {
+            "image": "72_ColesaIlieAlin.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9114983081817627
+        },
+        {
+            "image": "196_MinaMarian.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.977417528629303
+        },
+        {
+            "image": "50_CaragataFlorin.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9707316756248474
+        },
+        {
+            "image": "28_BiroRozaliaIbolya.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.5841177701950073
+        },
+        {
+            "image": "48_BuzoianuDianaAnda.JPG",
+            "label": "a person with a beard",
+            "confidence": 0.6208429932594299
+        },
+        {
+            "image": "151_IonescuRaduMihail.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.8304604291915894
+        },
+        {
+            "image": "27_BiroDanielRazvan.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.8537744283676147
+        },
+        {
+            "image": "247_PlujarAndreiGeorge.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.8783788681030273
+        },
+        {
+            "image": "205_MoisinRaduMarin.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.739093005657196
+        },
+        {
+            "image": "206_MolnarAndrei.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.8893169164657593
+        },
+        {
+            "image": "217_NagySzabolcs.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9652599692344666
+        },
+        {
+            "image": "257_PorumboiuGabriela.JPG",
+            "label": "a person with a beard",
+            "confidence": 0.6457571983337402
+        },
+        {
+            "image": "275_SanduViorica.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.8897316455841064
+        },
+        {
+            "image": "212_MuradMohammad.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9810497164726257
+        },
+        {
+            "image": "324_VulpescuIoan.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9101719260215759
+        },
+        {
+            "image": "286_StoicaBogdanAlin.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.8694976568222046
+        },
+        {
+            "image": "245_PiclisanGheorghePetru.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.5472552180290222
+        },
+        {
+            "image": "160_KelemenHunor.JPG",
+            "label": "a person with a beard",
+            "confidence": 0.5846561193466187
+        },
+        {
+            "image": "216_NacovGheorghe.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9691206812858582
+        },
+        {
+            "image": "25_BendeSandor.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9418326020240784
+        },
+        {
+            "image": "138_HagiuAugustinFlorin.JPG",
+            "label": "a person with a beard",
+            "confidence": 0.6064074039459229
+        },
+        {
+            "image": "237_PascaliniNiniAlexandru.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9494370818138123
+        },
+        {
+            "image": "219_NassarRodica.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.847953736782074
+        },
+        {
+            "image": "103_FagetMadalinLaurentiu.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9735519886016846
+        },
+        {
+            "image": "81_CozmaAdrianFelician.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9243683815002441
+        },
+        {
+            "image": "297_StirbuGigelSorinel.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9681618213653564
+        },
+        {
+            "image": "37_BoudaStefan.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9374760389328003
+        },
+        {
+            "image": "261_PuscasuLucianFlorin.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.8580206632614136
+        },
+        {
+            "image": "305_TomaIlie.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9870762228965759
+        },
+        {
+            "image": "161_KolcsarAnquetilKaroly.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9299616813659668
+        },
+        {
+            "image": "127_GligaDumitrita.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.7208037376403809
+        },
+        {
+            "image": "134_GrosuVeronica.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.6447984576225281
+        },
+        {
+            "image": "54_ChirilaVirgilAlin.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9753205180168152
+        },
+        {
+            "image": "9_AndronacheGabriel.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9469627737998962
+        },
+        {
+            "image": "284_StoenicaIrinaFlorentina.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.6247703433036804
+        },
+        {
+            "image": "155_IrimiaAncutaFlorina.JPG",
+            "label": "a person with a beard",
+            "confidence": 0.5615956783294678
+        },
+        {
+            "image": "104_FechetMircea.JPG",
+            "label": "a person with a beard",
+            "confidence": 0.5645163059234619
+        },
+        {
+            "image": "97_DunavaCostelNeculai.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9591334462165833
+        },
+        {
+            "image": "283_StanescuVetuta.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.7904702425003052
+        },
+        {
+            "image": "289_StroeIonutMarian.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9437400698661804
+        },
+        {
+            "image": "231_OltenasuSorinGeorge.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.929480791091919
+        },
+        {
+            "image": "144_IagarMonica.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.7247679829597473
+        },
+        {
+            "image": "31_BogdanIonelOvidiu.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9376962184906006
+        },
+        {
+            "image": "255_PopescuAntonioGabi.JPG",
+            "label": "a person with a beard",
+            "confidence": 0.7203102707862854
+        },
+        {
+            "image": "222_NeacsuMarian.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9563625454902649
+        },
+        {
+            "image": "157_IvanBogdanGruia.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9913833141326904
+        },
+        {
+            "image": "172_LorinczStefanIulian.JPG",
+            "label": "a person with a beard",
+            "confidence": 0.8825910687446594
+        },
+        {
+            "image": "99_EnacheDiana.JPG",
+            "label": "a person with a beard",
+            "confidence": 0.6211536526679993
+        },
+        {
+            "image": "288_StoicaStefanBucur.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9145806431770325
+        },
+        {
+            "image": "60_CiorneiDanielCatalin.JPG",
+            "label": "a person with a beard",
+            "confidence": 0.6026550531387329
+        },
+        {
+            "image": "167_LazarTeodor.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9415692687034607
+        },
+        {
+            "image": "238_PascariuMihaiCosmin.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.5804914236068726
+        },
+        {
+            "image": "164_KroncsisSebastianAndrei.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.8420969843864441
+        },
+        {
+            "image": "228_NegreaPetruGabriel.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9493370652198792
+        },
+        {
+            "image": "213_MurariuOana.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.5701673030853271
+        },
+        {
+            "image": "188_MiclauSamuelVirgil.JPG",
+            "label": "a person with a beard",
+            "confidence": 0.7414188385009766
+        },
+        {
+            "image": "330_ZakariasZoltan.JPG",
+            "label": "a person with a beard",
+            "confidence": 0.5955476760864258
+        },
+        {
+            "image": "209_MosteanuLiviuIonut.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9951475262641907
+        },
+        {
+            "image": "254_PopaStefanOvidiu.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9316850304603577
+        },
+        {
+            "image": "19_BarbuFlorinIonut.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9291049242019653
+        },
+        {
+            "image": "107_FirczakIuliusMarian.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.8172388672828674
+        },
+        {
+            "image": "328_WienerAdrian.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.8388389348983765
+        },
+        {
+            "image": "271_RomanFlorinClaudiu.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9604066014289856
+        },
+        {
+            "image": "201_MindrescuNicolae.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9795947670936584
+        },
+        {
+            "image": "7_AndreiAlexandruIoan.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.6063628196716309
+        },
+        {
+            "image": "242_PetaStefanescuElizaMadalina.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.513633668422699
+        },
+        {
+            "image": "277_SeresDenes.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.8864098787307739
+        },
+        {
+            "image": "89_DascaluCristinaEmanuela.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.723072350025177
+        },
+        {
+            "image": "75_ConstantinescuAndraClaudia.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.8173514008522034
+        },
+        {
+            "image": "326_VuscanVoicu.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.7627907395362854
+        },
+        {
+            "image": "147_IntoteroNataliaElena.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.7409047484397888
+        },
+        {
+            "image": "285_StoicaAlinBogdan.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.780058741569519
+        },
+        {
+            "image": "276_ScarlatGeorge.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9353916049003601
+        },
+        {
+            "image": "252_PopaGeorgeAdrian.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.5095779895782471
+        },
+        {
+            "image": "24_BejinariuEugen.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9539660811424255
+        },
+        {
+            "image": "149_IonStelianCristian.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.91292804479599
+        },
+        {
+            "image": "35_BosutarTiberiuNicolae.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.8971363306045532
+        },
+        {
+            "image": "178_MantaClaudiu.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9176353812217712
+        },
+        {
+            "image": "171_LongherGhervazen.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.8465437889099121
+        },
+        {
+            "image": "126_GiurgiuAdrian1.JPG",
+            "label": "a person with a beard",
+            "confidence": 0.7859503626823425
+        },
+        {
+            "image": "268_RinderAnaSmaranda.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.740196704864502
+        },
+        {
+            "image": "322_VexlerSilviu.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9567303657531738
+        },
+        {
+            "image": "232_OpreaOctavian.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.8978028297424316
+        },
+        {
+            "image": "116_GeamanuAuroraAdela.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.6779577136039734
+        },
+        {
+            "image": "256_PopoviciFlorinCornel.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.6673374176025391
+        },
+        {
+            "image": "102_EneGabrielaCorina.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.7634059190750122
+        },
+        {
+            "image": "108_FloreaGabrielFlorinel.JPG",
+            "label": "a person with a beard",
+            "confidence": 0.6003540754318237
+        },
+        {
+            "image": "106_FiforMihaiViorel.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9792247414588928
+        },
+        {
+            "image": "298_TanasaDan.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.8829309940338135
+        },
+        {
+            "image": "293_SendroiuVladIoan.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.5092943906784058
+        },
+        {
+            "image": "210_MuncaciuSorinTitus.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9757385849952698
+        },
+        {
+            "image": "244_PistruPopaSimonaGeanina.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.6915359497070312
+        },
+        {
+            "image": "32_BogdanelLucianGabriel.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9003158211708069
+        },
+        {
+            "image": "142_HristuCosmin.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.7583481073379517
+        },
+        {
+            "image": "88_CuleafaMihai.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9805328845977783
+        },
+        {
+            "image": "200_MitreaDumitrina.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.7193979024887085
+        },
+        {
+            "image": "46_BurdujaSebastianIoan.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9892639517784119
+        },
+        {
+            "image": "130_GovorMirceaVasile.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9477524161338806
+        },
+        {
+            "image": "51_CaciuAdrian.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9486008286476135
+        },
+        {
+            "image": "203_MocanuAdrian.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.8210306167602539
+        },
+        {
+            "image": "43_BuicanCristian.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9633755683898926
+        },
+        {
+            "image": "14_BaciuRomicaAndrei.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9232380986213684
+        },
+        {
+            "image": "176_MagyarLorandBalint.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9398472905158997
+        },
+        {
+            "image": "229_NicolaeDanMihai.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9719527363777161
+        },
+        {
+            "image": "40_BucuraOprescuSimona.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.7408117055892944
+        },
+        {
+            "image": "258_PriescuIoneliaFlorenta.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.8168239593505859
+        },
+        {
+            "image": "192_MihalceaSilviaClaudia.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.5627256631851196
+        },
+        {
+            "image": "45_BulearcaMariusFelix.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.7260497808456421
+        },
+        {
+            "image": "141_HolbanGeorgetaCarmen.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.7793529629707336
+        },
+        {
+            "image": "221_NeacsuAndreeaFiruta.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.6800479292869568
+        },
+        {
+            "image": "39_BucurArianaOana.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.5728684067726135
+        },
+        {
+            "image": "181_MarussiGeorgeNicolae.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9798423647880554
+        },
+        {
+            "image": "270_RogobeteAlexandruFlorin.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.6334531903266907
+        },
+        {
+            "image": "15_BadeaNeluValentin.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.8327093124389648
+        },
+        {
+            "image": "23_BecaliGeorge.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9247153401374817
+        },
+        {
+            "image": "92_DobreCiprianMinodor.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9767851233482361
+        },
+        {
+            "image": "121_GheorghiuAndreiFlorin.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9641113877296448
+        },
+        {
+            "image": "274_SamoilaIon.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9457398056983948
+        },
+        {
+            "image": "234_PandeaCiprian.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9334375262260437
+        },
+        {
+            "image": "215_MusatDoruLucian.JPG",
+            "label": "a person with a beard",
+            "confidence": 0.6399338245391846
+        },
+        {
+            "image": "280_SimuAuroraTasica.JPG",
+            "label": "a person with a beard",
+            "confidence": 0.5598405003547668
+        },
+        {
+            "image": "10_AndruscaLucianNicolae.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.8880519270896912
+        },
+        {
+            "image": "5_AlecuRobert.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.5058395862579346
+        },
+        {
+            "image": "128_GoidescuIonel.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9418450593948364
+        },
+        {
+            "image": "246_PlopeanuRodica.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.7380887866020203
+        },
+        {
+            "image": "193_MihaescuMugur.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9812734127044678
+        },
+        {
+            "image": "62_CiubucCiprian.JPG",
+            "label": "a person with a beard",
+            "confidence": 0.6342770457267761
+        },
+        {
+            "image": "139_HajduGabor.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9744283556938171
+        },
+        {
+            "image": "122_GheraGiureciSlobodan.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.8918540477752686
+        },
+        {
+            "image": "63_CiucaLiviuBogdan.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9828712940216064
+        },
+        {
+            "image": "241_PetretchiNicolaeMiroslav.JPG",
+            "label": "a person with a beard",
+            "confidence": 0.5687512755393982
+        },
+        {
+            "image": "223_NeaguPetreEmanoil.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9362851977348328
+        },
+        {
+            "image": "163_KonczeiCsaba.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.5405141115188599
+        },
+        {
+            "image": "251_PopaDorin.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.8071618676185608
+        },
+        {
+            "image": "131_GrindeanuSorinMihai.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9980109333992004
+        },
+        {
+            "image": "265_RaducanuSebastian.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9558390378952026
+        },
+        {
+            "image": "226_NeculaescuLaurentiuAdrian.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.6919158697128296
+        },
+        {
+            "image": "83_CristiciOgnean.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.8565506935119629
+        },
+        {
+            "image": "180_MarkoAttilaGabor.JPG",
+            "label": "a person with a beard",
+            "confidence": 0.6990984082221985
+        },
+        {
+            "image": "195_MiklosZoltan.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9868061542510986
+        },
+        {
+            "image": "318_VargaMariana.JPG",
+            "label": "a person with a beard",
+            "confidence": 0.5840182304382324
+        },
+        {
+            "image": "143_HutucaBogdanIulian.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9307413697242737
+        },
+        {
+            "image": "115_GavrilescuGratielaLeocadia.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.5587276816368103
+        },
+        {
+            "image": "119_GheorgheIonel.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9619367718696594
+        },
+        {
+            "image": "120_GheorgheMihaiClaudiu.JPG",
+            "label": "a person with a beard",
+            "confidence": 0.6069704294204712
+        },
+        {
+            "image": "123_GherasimLaura.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9533904790878296
+        },
+        {
+            "image": "248_PontaVictorViorel.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.8944615125656128
+        },
+        {
+            "image": "312_TiuMihaiAdrian.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.990557074546814
+        },
+        {
+            "image": "109_FurtunaMirela.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.823445737361908
+        },
+        {
+            "image": "52_CernitMaria.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.5817287564277649
+        },
+        {
+            "image": "239_PaunNicolae.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9716310501098633
+        },
+        {
+            "image": "67_CimpianuAndreeaPetronela.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.7298098206520081
+        },
+        {
+            "image": "11_ArtimonDanCatalin.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9030473232269287
+        },
+        {
+            "image": "74_ComanDragosFlorin.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9435861110687256
+        },
+        {
+            "image": "132_GrofuDaniel.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9501622319221497
+        },
+        {
+            "image": "93_DolineaschiAndrei.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9584771990776062
+        },
+        {
+            "image": "185_MatiesCalinGheorghe.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.6849657893180847
+        },
+        {
+            "image": "194_MihutiBogdanFlorian.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.514593780040741
+        },
+        {
+            "image": "113_GavrilaAnamaria.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.6151212453842163
+        },
+        {
+            "image": "16_BadiuGeorgel.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.99378901720047
+        },
+        {
+            "image": "214_MuraruIulianAlexandru.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9490859508514404
+        },
+        {
+            "image": "301_TileaDumitru.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9453422427177429
+        },
+        {
+            "image": "156_IsacMariusAdrian.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.8317137956619263
+        },
+        {
+            "image": "317_VaduvaDumitru.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9502627849578857
+        },
+        {
+            "image": "148_IonNicolaeMirel.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9521215558052063
+        },
+        {
+            "image": "177_ManolePetreFlorin.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.6072483658790588
+        },
+        {
+            "image": "263_RaduFabianCristian.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.6470641493797302
+        },
+        {
+            "image": "8_AndreiCosmin.JPG",
+            "label": "a person with a beard",
+            "confidence": 0.5183142423629761
+        },
+        {
+            "image": "249_PopaAlexandru.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9353459477424622
+        },
+        {
+            "image": "183_MateiSergiuLucian.JPG",
+            "label": "a person with a beard",
+            "confidence": 0.6960935592651367
+        },
+        {
+            "image": "313_ToiuOanaSilvia.JPG",
+            "label": "a person with a beard",
+            "confidence": 0.5110145807266235
+        },
+        {
+            "image": "169_LazaroiIoan.JPG",
+            "label": "a person with a beard",
+            "confidence": 0.5382835865020752
+        },
+        {
+            "image": "26_BerescuMonicaElena.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.5375810265541077
+        },
+        {
+            "image": "61_CiorteaRazvanIulian.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9858195781707764
+        },
+        {
+            "image": "112_GantOvidiuVictor.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9629824757575989
+        },
+        {
+            "image": "135_GrozaCalinFlorin.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.5389595031738281
+        },
+        {
+            "image": "224_NeamtuGeorgeMihail.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.853104293346405
+        },
+        {
+            "image": "20_BarstanTiberiuClaudiu.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.6762504577636719
+        },
+        {
+            "image": "42_BudaiMariusConstantin.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.8140848875045776
+        },
+        {
+            "image": "166_LadanyiLaszloZsolt.JPG",
+            "label": "a person with a beard",
+            "confidence": 0.501922070980072
+        },
+        {
+            "image": "218_NagyVasile.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9708809852600098
+        },
+        {
+            "image": "208_MosPatriciaSiminaArina.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.809792697429657
+        },
+        {
+            "image": "225_NeataEugen.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9763959050178528
+        },
+        {
+            "image": "118_GheorgheAndreiDaniel.JPG",
+            "label": "a person with a beard",
+            "confidence": 0.5425560474395752
+        },
+        {
+            "image": "295_SerbanGeorgeCatalin.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9204463958740234
+        },
+        {
+            "image": "240_PaunescuSilviuTitus.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9548804759979248
+        },
+        {
+            "image": "236_ParaschivescuOvidiuRomulus.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.8794196248054504
+        },
+        {
+            "image": "165_KulcsarTerzaJozsefGyorgy.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.8838874697685242
+        },
+        {
+            "image": "87_CsomaBotond.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9543261528015137
+        },
+        {
+            "image": "70_CoarnaDumitru.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9089493155479431
+        },
+        {
+            "image": "1_AdomnicaiMirelaElena.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.7920878529548645
+        },
+        {
+            "image": "18_BaraNicolaeAdrian.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9694443941116333
+        },
+        {
+            "image": "197_MirceaFlorin.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9829047918319702
+        },
+        {
+            "image": "302_TilvarAngel.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9928205609321594
+        },
+        {
+            "image": "22_BaisanuStefanAlexandru.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9622616171836853
+        },
+        {
+            "image": "310_TintaStefan.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.537521243095398
+        },
+        {
+            "image": "220_NasuiClaudiuIuliusGavril.JPG",
+            "label": "a person with a beard",
+            "confidence": 0.6315641403198242
+        },
+        {
+            "image": "250_PopaCristianAlexandru.JPG",
+            "label": "a person with a beard",
+            "confidence": 0.5310246348381042
+        },
+        {
+            "image": "94_DragoescuCezarMihail.JPG",
+            "label": "a person with a beard",
+            "confidence": 0.6653401255607605
+        },
+        {
+            "image": "260_PrunaCristinaMadalina.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.5695824027061462
+        },
+        {
+            "image": "56_CiobanuAdrianVirgil.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.8679032921791077
+        },
+        {
+            "image": "101_EnachiRaisa.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9686610698699951
+        },
+        {
+            "image": "49_CadarRazvanOlimpiu.JPG",
+            "label": "a person with a beard",
+            "confidence": 0.5489993691444397
+        },
+        {
+            "image": "44_BulaiIulian.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9191283583641052
+        },
+        {
+            "image": "110_GalCalinGratian.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9701990485191345
+        },
+        {
+            "image": "57_CiobotaruDragosFanica.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9474523067474365
+        },
+        {
+            "image": "227_NegoescuMihaiBogdan.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.944915771484375
+        },
+        {
+            "image": "86_CsillagAndrei.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.5048478841781616
+        },
+        {
+            "image": "77_CorchesCodrutaMaria.JPG",
+            "label": "a person with a beard",
+            "confidence": 0.5213226675987244
+        },
+        {
+            "image": "66_CimpeanOvidiuVasile.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9279154539108276
+        },
+        {
+            "image": "30_BodeLucianNicolae.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9691351652145386
+        },
+        {
+            "image": "53_ChilatCrinaFiorela.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.6251650452613831
+        },
+        {
+            "image": "158_JianuIosifFlorin.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9921951293945312
+        },
+        {
+            "image": "73_ColibanAllen.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9709419012069702
+        },
+        {
+            "image": "186_MargaritMiticaMarius.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.5437567830085754
+        },
+        {
+            "image": "29_BlagaDanielCodrut.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9285206198692322
+        },
+        {
+            "image": "179_MarinescuRadu.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9394184947013855
+        },
+        {
+            "image": "38_BruynseelsRamonaIoana.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.5920019745826721
+        },
+        {
+            "image": "311_TipleaDumitru.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.956788182258606
+        },
+        {
+            "image": "307_TrifBogdanGheorghe.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.8967233896255493
+        },
+        {
+            "image": "124_GhigiuAlexandruMihai.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9128128886222839
+        },
+        {
+            "image": "184_MatichescuMirelaFlorenta.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.6569635272026062
+        },
+        {
+            "image": "90_DimitriuAlexandruPaul.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.813094973564148
+        },
+        {
+            "image": "290_SuciuVasileDaniel.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9246549010276794
+        },
+        {
+            "image": "59_CiolacuIonMarcel.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.8088855743408203
+        },
+        {
+            "image": "202_MindrocCatalinViorel.JPG",
+            "label": "a person with a beard",
+            "confidence": 0.5245863795280457
+        },
+        {
+            "image": "314_UngureanuEmanuelDumitru.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.8003849983215332
+        },
+        {
+            "image": "267_RigmanCiprianDoru.JPG",
+            "label": "a person with a beard",
+            "confidence": 0.6869868636131287
+        },
+        {
+            "image": "150_IonescuMonica.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.7790606021881104
+        },
+        {
+            "image": "13_AvramescuStefanitaAlin.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.8504351377487183
+        },
+        {
+            "image": "309_TusaAdrianaDiana.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.7260600328445435
+        },
+        {
+            "image": "199_MititeluEduardTatian.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.7053043842315674
+        },
+        {
+            "image": "230_OanceaSilviuFlorin.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.5606032013893127
+        },
+        {
+            "image": "78_CorendeaCosminIoan.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.6031408905982971
+        },
+        {
+            "image": "85_CsepEvaAndrea.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.8273031115531921
+        },
+        {
+            "image": "65_CimpanCristianEmanuel.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9151293039321899
+        },
+        {
+            "image": "129_GorghiuAlinaStefania.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.8879225850105286
+        },
+        {
+            "image": "233_PambuccianVarujan.JPG",
+            "label": "a person with a beard",
+            "confidence": 0.597514808177948
+        },
+        {
+            "image": "105_FeodorSilviu.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9555587768554688
+        },
+        {
+            "image": "58_CiocanDoinita.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.7244600057601929
+        },
+        {
+            "image": "91_DobosElena.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.65445876121521
+        },
+        {
+            "image": "264_RafilaAlexandru.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.7119056582450867
+        },
+        {
+            "image": "154_IosubCosminTeodor.JPG",
+            "label": "a person with a beard",
+            "confidence": 0.5300202965736389
+        },
+        {
+            "image": "79_CotinescuIlieAurelian.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.939078688621521
+        },
+        {
+            "image": "117_GeorgescuGheorgheDaniel.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9647194743156433
+        },
+        {
+            "image": "281_SolomonAdrian.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9312910437583923
+        },
+        {
+            "image": "6_AmetVarol.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9706666469573975
+        },
+        {
+            "image": "136_GurluiSilviuOctavian.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9143660664558411
+        },
+        {
+            "image": "55_ChiritaRazvanMirel.JPG",
+            "label": "a person with a beard",
+            "confidence": 0.6268396377563477
+        },
+        {
+            "image": "243_PirteaMarilenGabriel.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9426430463790894
+        },
+        {
+            "image": "21_BasAnaMarcela.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.6886230111122131
+        },
+        {
+            "image": "315_VadimTudorLidia.JPG",
+            "label": "a person with a beard",
+            "confidence": 0.7137874960899353
+        },
+        {
+            "image": "100_EnacheMihaiAdrian.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.6857279539108276
+        },
+        {
+            "image": "96_DrulaCatalin.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.7289054989814758
+        },
+        {
+            "image": "259_PriscaRazvanSorin.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.929762065410614
+        },
+        {
+            "image": "198_MirutaRaduDinel.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9499614238739014
+        },
+        {
+            "image": "266_RaduceaGheorgheValentin.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.969730794429779
+        },
+        {
+            "image": "190_MihalceaIoan.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9232876300811768
+        },
+        {
+            "image": "162_KolerEduardVirgil.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9478231072425842
+        },
+        {
+            "image": "300_TeslariuAndreiIonut.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.8738524913787842
+        },
+        {
+            "image": "211_MunteanuValeriu.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.8860502243041992
+        },
+        {
+            "image": "316_VassLevente.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.8902120590209961
+        },
+        {
+            "image": "327_WeberMihai.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.96310955286026
+        },
+        {
+            "image": "168_LapusanRemusGabriel.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9109743237495422
+        },
+        {
+            "image": "4_AlecsandruMariusNicolae.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9368948340415955
+        },
+        {
+            "image": "272_RoscaMircea.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9216318130493164
+        },
+        {
+            "image": "308_TurcanRaluca.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9176822900772095
+        },
+        {
+            "image": "69_CirligeanuAriadnaElena.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.5344924926757812
+        },
+        {
+            "image": "140_HanganPollyannaHanellore.JPG",
+            "label": "a person with a beard",
+            "confidence": 0.5214535593986511
+        },
+        {
+            "image": "278_SighiartauRobertIonatan.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9440075755119324
+        },
+        {
+            "image": "95_DrinceanuVladFlorentin.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.749271035194397
+        },
+        {
+            "image": "189_MihaiuRaduNicolae.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.8815223574638367
+        },
+        {
+            "image": "3_AlbuDumitrita.JPG",
+            "label": "a person with a beard",
+            "confidence": 0.5847029089927673
+        },
+        {
+            "image": "319_VedinasVerginia.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.605330228805542
+        },
+        {
+            "image": "34_BorsGeorgeMadalin.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.8696131706237793
+        },
+        {
+            "image": "159_KantorBoglarka.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.8232451677322388
+        },
+        {
+            "image": "292_SzokeEcaterinaMariana.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.6423833966255188
+        },
+        {
+            "image": "80_CotirletPaulClaudiu.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.6844107508659363
+        },
+        {
+            "image": "114_GavrilaBiancaEugenia.JPG",
+            "label": "a person with a beard",
+            "confidence": 0.5586990118026733
+        },
+        {
+            "image": "47_ButuraCristinaIrina.JPG",
+            "label": "a person with a beard",
+            "confidence": 0.6016136407852173
+        },
+        {
+            "image": "82_CristianBrian.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.8333992958068848
+        },
+        {
+            "image": "303_ToaderBogdanAndrei.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.928290843963623
+        },
+        {
+            "image": "175_MacoveiIlieSimonaElena.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.6877844333648682
+        },
+        {
+            "image": "146_IbramIusein.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.6824522614479065
+        },
+        {
+            "image": "294_SerbanCiprianConstantin2025.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9733770489692688
+        },
+        {
+            "image": "17_BalanIoan.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9278947114944458
+        },
+        {
+            "image": "279_SimionGeorgeNicolae.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9246492981910706
+        },
+        {
+            "image": "323_VidraVladAndrei.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.8814814686775208
+        },
+        {
+            "image": "71_CojocaruPetruBogdan.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.8918036818504333
+        },
+        {
+            "image": "173_LovinRamona.JPG",
+            "label": "a person with a beard",
+            "confidence": 0.583514928817749
+        },
+        {
+            "image": "33_BordianAlexandru.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9358266592025757
+        },
+        {
+            "image": "187_MerkaAdrianMiroslav.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.8871381282806396
+        },
+        {
+            "image": "125_GimaGeorge.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9171555042266846
+        },
+        {
+            "image": "153_IordacheIon.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9528666138648987
+        },
+        {
+            "image": "170_LipaElisabeta.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.5346072912216187
+        },
+        {
+            "image": "68_CirligeaFlorinEugen.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9193426370620728
+        },
+        {
+            "image": "36_BotezMihaiCatalin.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.7767122387886047
+        },
+        {
+            "image": "331_ZisopolDragosGabriel.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9701358079910278
+        },
+        {
+            "image": "269_RodeanuBogdanIonel.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9792537689208984
+        },
+        {
+            "image": "287_StoicaDiana.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.8452563285827637
+        },
+        {
+            "image": "204_MoiseevAlexandrin.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.6416425704956055
+        },
+        {
+            "image": "137_GusaAndreiCosmin.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.8225432634353638
+        },
+        {
+            "image": "41_BudacaVasile.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9080254435539246
+        },
+        {
+            "image": "111_GalKaroly.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.9169811606407166
+        },
+        {
+            "image": "273_RusuSebastianMihai.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.8785222172737122
+        },
+        {
+            "image": "12_AtanasiuCorina.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.7330347895622253
+        },
+        {
+            "image": "133_GrosaruIoana.JPG",
+            "label": "a person without a beard",
+            "confidence": 0.8306211829185486
+        }
+    ]
+}

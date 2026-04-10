@@ -1,0 +1,1478 @@
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistici Barbă Parlamentari</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 20px;
+            color: #1c1e21;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        }
+        h1 { text-align: center; color: #1a73e8; margin-bottom: 10px; }
+        h2 { text-align: center; color: #5f6368; font-weight: 400; margin-bottom: 40px; }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #e8eaed;
+        }
+        .stat-item { text-align: center; }
+        .stat-value { font-size: 2.8em; font-weight: bold; color: #1967d2; display: block; }
+        .stat-label { color: #70757a; font-size: 1.1em; }
+
+        .filters {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            position: sticky;
+            top: 10px;
+            z-index: 100;
+        }
+        .filter-btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            background: #fff;
+            color: #5f6368;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            border: 1px solid #dadce0;
+        }
+        .filter-btn.active {
+            background: #1a73e8 !important;
+            color: white !important;
+            border-color: #1a73e8 !important;
+        }
+        .filter-btn:hover:not(.active) {
+            background: #f1f3f4;
+        }
+
+        .mp-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 25px;
+        }
+        .mp-card {
+            background: white;
+            border-radius: 10px;
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #e8eaed;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .mp-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .mp-card img {
+            width: 100%;
+            aspect-ratio: 1/1.2;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 12px;
+        }
+        .mp-name {
+            font-size: 0.9em;
+            font-weight: 600;
+            color: #202124;
+            display: block;
+            height: 2.4em;
+            line-height: 1.2em;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+        }
+        
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Analiză Parlamentari România</h1>
+        <h2>Statistici prezenţă barbă (Legislatura 2024-2028)</h2>
+        
+        <div class="stats-grid">
+            <div class="stat-item">
+                <span class="stat-value">325</span>
+                <span class="stat-label">Total Analizaţi</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">68</span>
+                <span class="stat-label">Cu Barbă</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">257</span>
+                <span class="stat-label">Fără Barbă</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">20.9%</span>
+                <span class="stat-label">Rată Barbă</span>
+            </div>
+        </div>
+
+        <div class="filters">
+            <button class="filter-btn active" onclick="applyFilter('all', this)">Toţi</button>
+            <button class="filter-btn" onclick="applyFilter('beard', this)">Cu Barbă</button>
+            <button class="filter-btn" onclick="applyFilter('nobeard', this)">Fără Barbă</button>
+        </div>
+
+        <div class="mp-grid" id="mpGrid">
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/51_CaciuAdrian.JPG" loading="lazy">
+                <span class="mp-name">Adrian Câciu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/98_EchertAdrian.JPG" loading="lazy">
+                <span class="mp-name">Adrian Echert</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/126_GiurgiuAdrian1.JPG" loading="lazy">
+                <span class="mp-name">Adrian Giurgiu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/203_MocanuAdrian.JPG" loading="lazy">
+                <span class="mp-name">Adrian Mocanu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/281_SolomonAdrian.JPG" loading="lazy">
+                <span class="mp-name">Adrian Solomon</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/328_WienerAdrian.JPG" loading="lazy">
+                <span class="mp-name">Adrian Wiener</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/81_CozmaAdrianFelician.JPG" loading="lazy">
+                <span class="mp-name">Adrian-Felician Cozma</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/187_MerkaAdrianMiroslav.JPG" loading="lazy">
+                <span class="mp-name">Adrian-Miroslav Merka</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/56_CiobanuAdrianVirgil.JPG" loading="lazy">
+                <span class="mp-name">Adrian-Virgil Ciobanu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/309_TusaAdrianaDiana.JPG" loading="lazy">
+                <span class="mp-name">Adriana Diana Tuºa</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/204_MoiseevAlexandrin.JPG" loading="lazy">
+                <span class="mp-name">Alexandrin Moiseev</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/33_BordianAlexandru.JPG" loading="lazy">
+                <span class="mp-name">Alexandru Bordian</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/249_PopaAlexandru.JPG" loading="lazy">
+                <span class="mp-name">Alexandru Popa</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/264_RafilaAlexandru.JPG" loading="lazy">
+                <span class="mp-name">Alexandru Rafila</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/270_RogobeteAlexandruFlorin.JPG" loading="lazy">
+                <span class="mp-name">Alexandru-Florin Rogobete</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/7_AndreiAlexandruIoan.JPG" loading="lazy">
+                <span class="mp-name">Alexandru-Ioan Andrei</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/124_GhigiuAlexandruMihai.JPG" loading="lazy">
+                <span class="mp-name">Alexandru-Mihai Ghigiu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/90_DimitriuAlexandruPaul.JPG" loading="lazy">
+                <span class="mp-name">Alexandru-Paul Dimitriu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/285_StoicaAlinBogdan.JPG" loading="lazy">
+                <span class="mp-name">Alin-Bogdan Stoica</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/129_GorghiuAlinaStefania.JPG" loading="lazy">
+                <span class="mp-name">Alina-ªtefania Gorghiu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/73_ColibanAllen.JPG" loading="lazy">
+                <span class="mp-name">Allen Coliban</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/21_BasAnaMarcela.JPG" loading="lazy">
+                <span class="mp-name">Ana-Marcela Baº</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/268_RinderAnaSmaranda.JPG" loading="lazy">
+                <span class="mp-name">Ana-Smaranda Rinder</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/113_GavrilaAnamaria.JPG" loading="lazy">
+                <span class="mp-name">Anamaria Gavrilã</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/155_IrimiaAncutaFlorina.JPG" loading="lazy">
+                <span class="mp-name">Ancuþa-Florina Irimia</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/75_ConstantinescuAndraClaudia.JPG" loading="lazy">
+                <span class="mp-name">Andra-Claudia Constantinescu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/221_NeacsuAndreeaFiruta.JPG" loading="lazy">
+                <span class="mp-name">Andreea-Firuþa Neacºu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/67_CimpianuAndreeaPetronela.JPG" loading="lazy">
+                <span class="mp-name">Andreea-Petronela Cîmpianu</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/86_CsillagAndrei.JPG" loading="lazy">
+                <span class="mp-name">Andrei Csillag</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/118_GheorgheAndreiDaniel.JPG" loading="lazy">
+                <span class="mp-name">Andrei Daniel Gheorghe</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/93_DolineaschiAndrei.JPG" loading="lazy">
+                <span class="mp-name">Andrei Dolineaschi</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/247_PlujarAndreiGeorge.JPG" loading="lazy">
+                <span class="mp-name">Andrei George Plujar</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/206_MolnarAndrei.JPG" loading="lazy">
+                <span class="mp-name">Andrei Molnar</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/137_GusaAndreiCosmin.JPG" loading="lazy">
+                <span class="mp-name">Andrei-Cosmin Guºã</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/121_GheorghiuAndreiFlorin.JPG" loading="lazy">
+                <span class="mp-name">Andrei-Florin Gheorghiu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/300_TeslariuAndreiIonut.JPG" loading="lazy">
+                <span class="mp-name">Andrei-Ionuþ Teslariu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/182_MateiAneta.JPG" loading="lazy">
+                <span class="mp-name">Aneta Matei</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/302_TilvarAngel.JPG" loading="lazy">
+                <span class="mp-name">Angel Tîlvãr</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/161_KolcsarAnquetilKaroly.JPG" loading="lazy">
+                <span class="mp-name">Anquetil-Károly Kolcsár</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/255_PopescuAntonioGabi.JPG" loading="lazy">
+                <span class="mp-name">Antonio-Gabi Popescu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/69_CirligeanuAriadnaElena.JPG" loading="lazy">
+                <span class="mp-name">Ariadna-Elena Cîrligeanu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/39_BucurArianaOana.JPG" loading="lazy">
+                <span class="mp-name">Ariana-Oana Bucur</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/180_MarkoAttilaGabor.JPG" loading="lazy">
+                <span class="mp-name">Attila-Gábor Markó</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/138_HagiuAugustinFlorin.JPG" loading="lazy">
+                <span class="mp-name">Augustin-Florin Hagiu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/116_GeamanuAuroraAdela.JPG" loading="lazy">
+                <span class="mp-name">Aurora-Adela Geamãnu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/280_SimuAuroraTasica.JPG" loading="lazy">
+                <span class="mp-name">Aurora-Tasica Simu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/114_GavrilaBiancaEugenia.JPG" loading="lazy">
+                <span class="mp-name">Bianca-Eugenia Gavrilã</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/307_TrifBogdanGheorghe.JPG" loading="lazy">
+                <span class="mp-name">Bogdan Gheorghe Trif</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/286_StoicaBogdanAlin.JPG" loading="lazy">
+                <span class="mp-name">Bogdan-Alin Stoica</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/303_ToaderBogdanAndrei.JPG" loading="lazy">
+                <span class="mp-name">Bogdan-Andrei Toader</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/194_MihutiBogdanFlorian.JPG" loading="lazy">
+                <span class="mp-name">Bogdan-Florian Mihuþi</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/157_IvanBogdanGruia.JPG" loading="lazy">
+                <span class="mp-name">Bogdan-Gruia Ivan</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/269_RodeanuBogdanIonel.JPG" loading="lazy">
+                <span class="mp-name">Bogdan-Ionel Rodeanu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/143_HutucaBogdanIulian.JPG" loading="lazy">
+                <span class="mp-name">Bogdan-Iulian Huþucã</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/159_KantorBoglarka.JPG" loading="lazy">
+                <span class="mp-name">Boglárka Kántor</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/87_CsomaBotond.JPG" loading="lazy">
+                <span class="mp-name">Botond Csoma</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/82_CristianBrian.JPG" loading="lazy">
+                <span class="mp-name">Brian Cristian</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/94_DragoescuCezarMihail.JPG" loading="lazy">
+                <span class="mp-name">Cezar-Mihail Drãgoescu</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/62_CiubucCiprian.JPG" loading="lazy">
+                <span class="mp-name">Ciprian Ciubuc</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/234_PandeaCiprian.JPG" loading="lazy">
+                <span class="mp-name">Ciprian Pandea</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/235_ParaschivCiprianConstantin.JPG" loading="lazy">
+                <span class="mp-name">Ciprian-Constantin Paraschiv</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/294_SerbanCiprianConstantin2025.JPG" loading="lazy">
+                <span class="mp-name">Ciprian-Constantin ªerban</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/267_RigmanCiprianDoru.JPG" loading="lazy">
+                <span class="mp-name">Ciprian-Doru Rigman</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/92_DobreCiprianMinodor.JPG" loading="lazy">
+                <span class="mp-name">Ciprian-Minodor Dobre</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/178_MantaClaudiu.JPG" loading="lazy">
+                <span class="mp-name">Claudiu Manta</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/220_NasuiClaudiuIuliusGavril.JPG" loading="lazy">
+                <span class="mp-name">Claudiu-Iulius-Gavril Nãsui</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/77_CorchesCodrutaMaria.JPG" loading="lazy">
+                <span class="mp-name">Codruþa-Maria Corcheº</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/12_AtanasiuCorina.JPG" loading="lazy">
+                <span class="mp-name">Corina Atanasiu</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/8_AndreiCosmin.JPG" loading="lazy">
+                <span class="mp-name">Cosmin Andrei</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/142_HristuCosmin.JPG" loading="lazy">
+                <span class="mp-name">Cosmin Hristu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/78_CorendeaCosminIoan.JPG" loading="lazy">
+                <span class="mp-name">Cosmin-Ioan Corendea</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/154_IosubCosminTeodor.JPG" loading="lazy">
+                <span class="mp-name">Cosmin-Teodor Iosub</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/97_DunavaCostelNeculai.JPG" loading="lazy">
+                <span class="mp-name">Costel Neculai Dunava</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/53_ChilatCrinaFiorela.JPG" loading="lazy">
+                <span class="mp-name">Crina-Fiorela Chilat</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/43_BuicanCristian.JPG" loading="lazy">
+                <span class="mp-name">Cristian Buican</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/250_PopaCristianAlexandru.JPG" loading="lazy">
+                <span class="mp-name">Cristian-Alexandru Popa</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/65_CimpanCristianEmanuel.JPG" loading="lazy">
+                <span class="mp-name">Cristian-Emanuel Cîmpan</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/89_DascaluCristinaEmanuela.JPG" loading="lazy">
+                <span class="mp-name">Cristina-Emanuela Dascãlu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/47_ButuraCristinaIrina.JPG" loading="lazy">
+                <span class="mp-name">Cristina-Irina Buturã</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/260_PrunaCristinaMadalina.JPG" loading="lazy">
+                <span class="mp-name">Cristina-Mãdãlina Prunã</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/163_KonczeiCsaba.JPG" loading="lazy">
+                <span class="mp-name">Csaba Könczei</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/135_GrozaCalinFlorin.JPG" loading="lazy">
+                <span class="mp-name">Cãlin-Florin Groza</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/185_MatiesCalinGheorghe.JPG" loading="lazy">
+                <span class="mp-name">Cãlin-Gheorghe Matieº</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/110_GalCalinGratian.JPG" loading="lazy">
+                <span class="mp-name">Cãlin-Graþian Gal</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/96_DrulaCatalin.JPG" loading="lazy">
+                <span class="mp-name">Cãtãlin Drulã</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/202_MindrocCatalinViorel.JPG" loading="lazy">
+                <span class="mp-name">Cãtãlin-Viorel Mîndroc</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/298_TanasaDan.JPG" loading="lazy">
+                <span class="mp-name">Dan Tanasã</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/11_ArtimonDanCatalin.JPG" loading="lazy">
+                <span class="mp-name">Dan-Cãtãlin Artimon</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/229_NicolaeDanMihai.JPG" loading="lazy">
+                <span class="mp-name">Dan-Mihai Nicolae</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/132_GrofuDaniel.JPG" loading="lazy">
+                <span class="mp-name">Daniel Grofu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/29_BlagaDanielCodrut.JPG" loading="lazy">
+                <span class="mp-name">Daniel-Codruþ Blaga</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/60_CiorneiDanielCatalin.JPG" loading="lazy">
+                <span class="mp-name">Daniel-Cãtãlin Ciornei</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/27_BiroDanielRazvan.JPG" loading="lazy">
+                <span class="mp-name">Daniel-Rãzvan Biro</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/99_EnacheDiana.JPG" loading="lazy">
+                <span class="mp-name">Diana Enache</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/287_StoicaDiana.JPG" loading="lazy">
+                <span class="mp-name">Diana Stoica</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/48_BuzoianuDianaAnda.JPG" loading="lazy">
+                <span class="mp-name">Diana-Anda Buzoianu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/58_CiocanDoinita.JPG" loading="lazy">
+                <span class="mp-name">Doiniþa Ciocan</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/325_VulpoiuDorel.JPG" loading="lazy">
+                <span class="mp-name">Dorel Vulpoiu</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/251_PopaDorin.JPG" loading="lazy">
+                <span class="mp-name">Dorin Popa</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/215_MusatDoruLucian.JPG" loading="lazy">
+                <span class="mp-name">Doru-Lucian Muºat</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/331_ZisopolDragosGabriel.JPG" loading="lazy">
+                <span class="mp-name">Dragoº Gabriel Zisopol</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/74_ComanDragosFlorin.JPG" loading="lazy">
+                <span class="mp-name">Dragoº-Florin Coman</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/57_CiobotaruDragosFanica.JPG" loading="lazy">
+                <span class="mp-name">Dragoº-Fãnicã Ciobotaru</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/200_MitreaDumitrina.JPG" loading="lazy">
+                <span class="mp-name">Dumitrina Mitrea</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/3_AlbuDumitrita.JPG" loading="lazy">
+                <span class="mp-name">Dumitriþa Albu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/127_GligaDumitrita.JPG" loading="lazy">
+                <span class="mp-name">Dumitriþa Gliga</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/70_CoarnaDumitru.JPG" loading="lazy">
+                <span class="mp-name">Dumitru Coarnã</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/301_TileaDumitru.JPG" loading="lazy">
+                <span class="mp-name">Dumitru Tilea</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/317_VaduvaDumitru.JPG" loading="lazy">
+                <span class="mp-name">Dumitru Vãduva</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/311_TipleaDumitru.JPG" loading="lazy">
+                <span class="mp-name">Dumitru Þiplea</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/277_SeresDenes.JPG" loading="lazy">
+                <span class="mp-name">Dénes Seres</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/292_SzokeEcaterinaMariana.JPG" loading="lazy">
+                <span class="mp-name">Ecaterina-Mariana Szõke</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/199_MititeluEduardTatian.JPG" loading="lazy">
+                <span class="mp-name">Eduard-Tatian Mititelu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/162_KolerEduardVirgil.JPG" loading="lazy">
+                <span class="mp-name">Eduard-Virgil Koler</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/304_ToaderElenaLaura.JPG" loading="lazy">
+                <span class="mp-name">Elena-Laura Toader</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/170_LipaElisabeta.JPG" loading="lazy">
+                <span class="mp-name">Elisabeta Lipã</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/242_PetaStefanescuElizaMadalina.JPG" loading="lazy">
+                <span class="mp-name">Eliza-Mãdãlina Peþa-ªtefãnescu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/314_UngureanuEmanuelDumitru.JPG" loading="lazy">
+                <span class="mp-name">Emanuel-Dumitru Ungureanu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/24_BejinariuEugen.JPG" loading="lazy">
+                <span class="mp-name">Eugen Bejinariu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/225_NeataEugen.JPG" loading="lazy">
+                <span class="mp-name">Eugen Neaþã</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/263_RaduFabianCristian.JPG" loading="lazy">
+                <span class="mp-name">Fabian-Cristian Radu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/50_CaragataFlorin.JPG" loading="lazy">
+                <span class="mp-name">Florin Caragaþã</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/197_MirceaFlorin.JPG" loading="lazy">
+                <span class="mp-name">Florin Mircea</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/321_VelcescuFlorinBogdan.JPG" loading="lazy">
+                <span class="mp-name">Florin-Bogdan Velcescu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/271_RomanFlorinClaudiu.JPG" loading="lazy">
+                <span class="mp-name">Florin-Claudiu Roman</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/256_PopoviciFlorinCornel.JPG" loading="lazy">
+                <span class="mp-name">Florin-Cornel Popovici</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/68_CirligeaFlorinEugen.JPG" loading="lazy">
+                <span class="mp-name">Florin-Eugen Cîrligea</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/19_BarbuFlorinIonut.JPG" loading="lazy">
+                <span class="mp-name">Florin-Ionuþ Barbu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/9_AndronacheGabriel.JPG" loading="lazy">
+                <span class="mp-name">Gabriel Andronache</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/108_FloreaGabrielFlorinel.JPG" loading="lazy">
+                <span class="mp-name">Gabriel-Florinel Florea</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/257_PorumboiuGabriela.JPG" loading="lazy">
+                <span class="mp-name">Gabriela Porumboiu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/102_EneGabrielaCorina.JPG" loading="lazy">
+                <span class="mp-name">Gabriela-Corina Ene</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/23_BecaliGeorge.JPG" loading="lazy">
+                <span class="mp-name">George Becali</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/295_SerbanGeorgeCatalin.JPG" loading="lazy">
+                <span class="mp-name">George Cãtãlin ªerban</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/125_GimaGeorge.JPG" loading="lazy">
+                <span class="mp-name">George Gima</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/276_ScarlatGeorge.JPG" loading="lazy">
+                <span class="mp-name">George Scarlat</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/252_PopaGeorgeAdrian.JPG" loading="lazy">
+                <span class="mp-name">George-Adrian Popa</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/224_NeamtuGeorgeMihail.JPG" loading="lazy">
+                <span class="mp-name">George-Mihail Neamþu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/34_BorsGeorgeMadalin.JPG" loading="lazy">
+                <span class="mp-name">George-Mãdãlin Borº</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/181_MarussiGeorgeNicolae.JPG" loading="lazy">
+                <span class="mp-name">George-Nicolae Marussi</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/279_SimionGeorgeNicolae.JPG" loading="lazy">
+                <span class="mp-name">George-Nicolae Simion</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/16_BadiuGeorgel.JPG" loading="lazy">
+                <span class="mp-name">Georgel Badiu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/141_HolbanGeorgetaCarmen.JPG" loading="lazy">
+                <span class="mp-name">Georgeta-Carmen Holban</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/216_NacovGheorghe.JPG" loading="lazy">
+                <span class="mp-name">Gheorghe Nacov</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/117_GeorgescuGheorgheDaniel.JPG" loading="lazy">
+                <span class="mp-name">Gheorghe-Daniel Georgescu</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/245_PiclisanGheorghePetru.JPG" loading="lazy">
+                <span class="mp-name">Gheorghe-Petru Pîcliºan</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/266_RaduceaGheorgheValentin.JPG" loading="lazy">
+                <span class="mp-name">Gheorghe-Valentin Rãducea</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/171_LongherGhervazen.JPG" loading="lazy">
+                <span class="mp-name">Ghervazen Longher</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/297_StirbuGigelSorinel.JPG" loading="lazy">
+                <span class="mp-name">Gigel-Sorinel ªtirbu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/122_GheraGiureciSlobodan.JPG" loading="lazy">
+                <span class="mp-name">Giureci-Slobodan Ghera</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/115_GavrilescuGratielaLeocadia.JPG" loading="lazy">
+                <span class="mp-name">Graþiela Leocadia Gavrilescu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/139_HajduGabor.JPG" loading="lazy">
+                <span class="mp-name">Gábor Hajdu</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/160_KelemenHunor.JPG" loading="lazy">
+                <span class="mp-name">Hunor Kelemen</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/305_TomaIlie.JPG" loading="lazy">
+                <span class="mp-name">Ilie Toma</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/72_ColesaIlieAlin.JPG" loading="lazy">
+                <span class="mp-name">Ilie-Alin Coleºa</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/79_CotinescuIlieAurelian.JPG" loading="lazy">
+                <span class="mp-name">Ilie-Aurelian Cotinescu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/17_BalanIoan.JPG" loading="lazy">
+                <span class="mp-name">Ioan Balan</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/169_LazaroiIoan.JPG" loading="lazy">
+                <span class="mp-name">Ioan Lãzãroi</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/190_MihalceaIoan.JPG" loading="lazy">
+                <span class="mp-name">Ioan Mihalcea</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/324_VulpescuIoan.JPG" loading="lazy">
+                <span class="mp-name">Ioan Vulpescu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/133_GrosaruIoana.JPG" loading="lazy">
+                <span class="mp-name">Ioana Grosaru</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/153_IordacheIon.JPG" loading="lazy">
+                <span class="mp-name">Ion Iordache</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/274_SamoilaIon.JPG" loading="lazy">
+                <span class="mp-name">Ion Samoilã</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/59_CiolacuIonMarcel.JPG" loading="lazy">
+                <span class="mp-name">Ion-Marcel Ciolacu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/320_VelaIonMarcel.JPG" loading="lazy">
+                <span class="mp-name">Ion-Marcel Vela</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/64_CiuntIonel.JPG" loading="lazy">
+                <span class="mp-name">Ionel Ciunt</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/119_GheorgheIonel.JPG" loading="lazy">
+                <span class="mp-name">Ionel Gheorghe</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/128_GoidescuIonel.JPG" loading="lazy">
+                <span class="mp-name">Ionel Goidescu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/282_StancuIonel.JPG" loading="lazy">
+                <span class="mp-name">Ionel Stancu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/31_BogdanIonelOvidiu.JPG" loading="lazy">
+                <span class="mp-name">Ionel-Ovidiu Bogdan</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/258_PriescuIoneliaFlorenta.JPG" loading="lazy">
+                <span class="mp-name">Ionelia-Florenþa Priescu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/289_StroeIonutMarian.JPG" loading="lazy">
+                <span class="mp-name">Ionuþ-Marian Stroe</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/158_JianuIosifFlorin.JPG" loading="lazy">
+                <span class="mp-name">Iosif-Florin Jianu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/284_StoenicaIrinaFlorentina.JPG" loading="lazy">
+                <span class="mp-name">Irina-Florentina Stoenicã</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/44_BulaiIulian.JPG" loading="lazy">
+                <span class="mp-name">Iulian Bulai</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/214_MuraruIulianAlexandru.JPG" loading="lazy">
+                <span class="mp-name">Iulian-Alexandru Muraru</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/107_FirczakIuliusMarian.JPG" loading="lazy">
+                <span class="mp-name">Iulius Marian Firczak</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/146_IbramIusein.JPG" loading="lazy">
+                <span class="mp-name">Iusein Ibram</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/165_KulcsarTerzaJozsefGyorgy.JPG" loading="lazy">
+                <span class="mp-name">József-György Kulcsár-Terza</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/111_GalKaroly.JPG" loading="lazy">
+                <span class="mp-name">Károly Gál</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/123_GherasimLaura.JPG" loading="lazy">
+                <span class="mp-name">Laura Gherasim</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/226_NeculaescuLaurentiuAdrian.JPG" loading="lazy">
+                <span class="mp-name">Laurenþiu Adrian Neculaescu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/316_VassLevente.JPG" loading="lazy">
+                <span class="mp-name">Levente Vass</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/315_VadimTudorLidia.JPG" loading="lazy">
+                <span class="mp-name">Lidia Vadim-Tudor</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/63_CiucaLiviuBogdan.JPG" loading="lazy">
+                <span class="mp-name">Liviu-Bogdan Ciucã</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/209_MosteanuLiviuIonut.JPG" loading="lazy">
+                <span class="mp-name">Liviu-Ionuþ Moºteanu</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/176_MagyarLorandBalint.JPG" loading="lazy">
+                <span class="mp-name">Loránd-Bálint Magyar</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/30_BodeLucianNicolae.JPG" loading="lazy">
+                <span class="mp-name">Lucian Nicolae Bode</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/261_PuscasuLucianFlorin.JPG" loading="lazy">
+                <span class="mp-name">Lucian-Florin Puºcaºu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/32_BogdanelLucianGabriel.JPG" loading="lazy">
+                <span class="mp-name">Lucian-Gabriel Bogdãnel</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/207_MorarLucianIoanTitus.JPG" loading="lazy">
+                <span class="mp-name">Lucian-Ioan-Titus Morar</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/10_AndruscaLucianNicolae.JPG" loading="lazy">
+                <span class="mp-name">Lucian-Nicolae Andruºcã</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/166_LadanyiLaszloZsolt.JPG" loading="lazy">
+                <span class="mp-name">László-Zsolt Ladányi</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/91_DobosElena.JPG" loading="lazy">
+                <span class="mp-name">MP 91</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/52_CernitMaria.JPG" loading="lazy">
+                <span class="mp-name">Maria Cernit</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/84_CrusoveanuMarian.JPG" loading="lazy">
+                <span class="mp-name">Marian Cruºoveanu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/196_MinaMarian.JPG" loading="lazy">
+                <span class="mp-name">Marian Mina</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/222_NeacsuMarian.JPG" loading="lazy">
+                <span class="mp-name">Marian Neacºu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/318_VargaMariana.JPG" loading="lazy">
+                <span class="mp-name">Mariana Vârgã</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/253_PopaMaricel.JPG" loading="lazy">
+                <span class="mp-name">Maricel Popa</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/243_PirteaMarilenGabriel.JPG" loading="lazy">
+                <span class="mp-name">Marilen - Gabriel Pirtea</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/156_IsacMariusAdrian.JPG" loading="lazy">
+                <span class="mp-name">Marius-Adrian Isac</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/42_BudaiMariusConstantin.JPG" loading="lazy">
+                <span class="mp-name">Marius-Constantin Budãi</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/45_BulearcaMariusFelix.JPG" loading="lazy">
+                <span class="mp-name">Marius-Felix Bulearcã</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/145_IancuMariusIonel.JPG" loading="lazy">
+                <span class="mp-name">Marius-Ionel Iancu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/4_AlecsandruMariusNicolae.JPG" loading="lazy">
+                <span class="mp-name">Marius-Nicolae Alecsandru</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/88_CuleafaMihai.JPG" loading="lazy">
+                <span class="mp-name">Mihai Culeafã</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/327_WeberMihai.JPG" loading="lazy">
+                <span class="mp-name">Mihai Weber</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/100_EnacheMihaiAdrian.JPG" loading="lazy">
+                <span class="mp-name">Mihai-Adrian Enache</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/312_TiuMihaiAdrian.JPG" loading="lazy">
+                <span class="mp-name">Mihai-Adrian Þiu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/227_NegoescuMihaiBogdan.JPG" loading="lazy">
+                <span class="mp-name">Mihai-Bogdan Negoescu</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/120_GheorgheMihaiClaudiu.JPG" loading="lazy">
+                <span class="mp-name">Mihai-Claudiu Gheorghe</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/238_PascariuMihaiCosmin.JPG" loading="lazy">
+                <span class="mp-name">Mihai-Cosmin Pascariu</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/36_BotezMihaiCatalin.JPG" loading="lazy">
+                <span class="mp-name">Mihai-Cãtãlin Botez</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/106_FiforMihaiViorel.JPG" loading="lazy">
+                <span class="mp-name">Mihai-Viorel Fifor</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/104_FechetMircea.JPG" loading="lazy">
+                <span class="mp-name">Mircea Fechet</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/272_RoscaMircea.JPG" loading="lazy">
+                <span class="mp-name">Mircea Roºca</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/130_GovorMirceaVasile.JPG" loading="lazy">
+                <span class="mp-name">Mircea-Vasile Govor</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/1_AdomnicaiMirelaElena.JPG" loading="lazy">
+                <span class="mp-name">Mirela Elena Adomnicãi</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/109_FurtunaMirela.JPG" loading="lazy">
+                <span class="mp-name">Mirela Furtunã</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/184_MatichescuMirelaFlorenta.JPG" loading="lazy">
+                <span class="mp-name">Mirela-Florenþa Matichescu</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/186_MargaritMiticaMarius.JPG" loading="lazy">
+                <span class="mp-name">Miticã-Marius Mãrgãrit</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/212_MuradMohammad.JPG" loading="lazy">
+                <span class="mp-name">Mohammad Murad</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/144_IagarMonica.JPG" loading="lazy">
+                <span class="mp-name">Monica Iagãr</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/150_IonescuMonica.JPG" loading="lazy">
+                <span class="mp-name">Monica Ionescu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/26_BerescuMonicaElena.JPG" loading="lazy">
+                <span class="mp-name">Monica-Elena Berescu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/193_MihaescuMugur.JPG" loading="lazy">
+                <span class="mp-name">Mugur Mihãescu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/103_FagetMadalinLaurentiu.JPG" loading="lazy">
+                <span class="mp-name">Mãdãlin-Laurenþiu Fãget</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/147_IntoteroNataliaElena.JPG" loading="lazy">
+                <span class="mp-name">Natalia-Elena Intotero</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/15_BadeaNeluValentin.JPG" loading="lazy">
+                <span class="mp-name">Nelu-Valentin Badea</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/201_MindrescuNicolae.JPG" loading="lazy">
+                <span class="mp-name">Nicolae Mîndrescu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/239_PaunNicolae.JPG" loading="lazy">
+                <span class="mp-name">Nicolae Pãun</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/18_BaraNicolaeAdrian.JPG" loading="lazy">
+                <span class="mp-name">Nicolae-Adrian Bara</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/148_IonNicolaeMirel.JPG" loading="lazy">
+                <span class="mp-name">Nicolae-Mirel Ion</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/241_PetretchiNicolaeMiroslav.JPG" loading="lazy">
+                <span class="mp-name">Nicolae-Miroslav Petreþchi</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/237_PascaliniNiniAlexandru.JPG" loading="lazy">
+                <span class="mp-name">Nini-Alexandru Pascalini</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/213_MurariuOana.JPG" loading="lazy">
+                <span class="mp-name">Oana Murariu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/313_ToiuOanaSilvia.JPG" loading="lazy">
+                <span class="mp-name">Oana-Silvia Ţoiu (MP 313)</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/232_OpreaOctavian.JPG" loading="lazy">
+                <span class="mp-name">Octavian Oprea</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/83_CristiciOgnean.JPG" loading="lazy">
+                <span class="mp-name">Ognean Crîstici</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/112_GantOvidiuVictor.JPG" loading="lazy">
+                <span class="mp-name">Ovidiu Victor Ganþ</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/236_ParaschivescuOvidiuRomulus.JPG" loading="lazy">
+                <span class="mp-name">Ovidiu-Romulus Paraschivescu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/66_CimpeanOvidiuVasile.JPG" loading="lazy">
+                <span class="mp-name">Ovidiu-Vasile Cîmpean</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/208_MosPatriciaSiminaArina.JPG" loading="lazy">
+                <span class="mp-name">Patricia-Simina-Arina Moº</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/80_CotirletPaulClaudiu.JPG" loading="lazy">
+                <span class="mp-name">Paul-Claudiu Cotîrleþ</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/262_PuscasuPetre.JPG" loading="lazy">
+                <span class="mp-name">Petre Puºcaºu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/223_NeaguPetreEmanoil.JPG" loading="lazy">
+                <span class="mp-name">Petre-Emanoil Neagu</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/177_ManolePetreFlorin.JPG" loading="lazy">
+                <span class="mp-name">Petre-Florin Manole</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/71_CojocaruPetruBogdan.JPG" loading="lazy">
+                <span class="mp-name">Petru-Bogdan Cojocaru</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/228_NegreaPetruGabriel.JPG" loading="lazy">
+                <span class="mp-name">Petru-Gabriel Negrea</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/140_HanganPollyannaHanellore.JPG" loading="lazy">
+                <span class="mp-name">Pollyanna-Hanellore Hangan</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/179_MarinescuRadu.JPG" loading="lazy">
+                <span class="mp-name">Radu Marinescu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/198_MirutaRaduDinel.JPG" loading="lazy">
+                <span class="mp-name">Radu-Dinel Miruþã</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/205_MoisinRaduMarin.JPG" loading="lazy">
+                <span class="mp-name">Radu-Marin Moisin</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/151_IonescuRaduMihail.JPG" loading="lazy">
+                <span class="mp-name">Radu-Mihail Ionescu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/189_MihaiuRaduNicolae.JPG" loading="lazy">
+                <span class="mp-name">Radu-Nicolae Mihaiu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/101_EnachiRaisa.JPG" loading="lazy">
+                <span class="mp-name">Raisa Enachi</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/308_TurcanRaluca.JPG" loading="lazy">
+                <span class="mp-name">Raluca Turcan</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/173_LovinRamona.JPG" loading="lazy">
+                <span class="mp-name">Ramona Lovin</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/38_BruynseelsRamonaIoana.JPG" loading="lazy">
+                <span class="mp-name">Ramona-Ioana Bruynseels</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/168_LapusanRemusGabriel.JPG" loading="lazy">
+                <span class="mp-name">Remus-Gabriel Lãpuºan</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/191_MihalceaRemusGabriel.JPG" loading="lazy">
+                <span class="mp-name">Remus-Gabriel Mihalcea</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/5_AlecuRobert.JPG" loading="lazy">
+                <span class="mp-name">Robert Alecu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/278_SighiartauRobertIonatan.JPG" loading="lazy">
+                <span class="mp-name">Robert-Ionatan Sighiartãu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/219_NassarRodica.JPG" loading="lazy">
+                <span class="mp-name">Rodica Nassar</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/246_PlopeanuRodica.JPG" loading="lazy">
+                <span class="mp-name">Rodica Plopeanu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/174_LunguRomeoDaniel.JPG" loading="lazy">
+                <span class="mp-name">Romeo-Daniel Lungu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/14_BaciuRomicaAndrei.JPG" loading="lazy">
+                <span class="mp-name">Romicã-Andrei Baciu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/28_BiroRozaliaIbolya.JPG" loading="lazy">
+                <span class="mp-name">Rozália-Ibolya Biró</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/259_PriscaRazvanSorin.JPG" loading="lazy">
+                <span class="mp-name">Rãzvan Sorin Priºcã</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/61_CiorteaRazvanIulian.JPG" loading="lazy">
+                <span class="mp-name">Rãzvan-Iulian Ciortea</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/55_ChiritaRazvanMirel.JPG" loading="lazy">
+                <span class="mp-name">Rãzvan-Mirel Chiriþã</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/49_CadarRazvanOlimpiu.JPG" loading="lazy">
+                <span class="mp-name">Rãzvan-Olimpiu Cadar</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/188_MiclauSamuelVirgil.JPG" loading="lazy">
+                <span class="mp-name">Samuel-Virgil Miclãu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/265_RaducanuSebastian.JPG" loading="lazy">
+                <span class="mp-name">Sebastian Rãducanu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/164_KroncsisSebastianAndrei.JPG" loading="lazy">
+                <span class="mp-name">Sebastian-Andrei Kroncsiº</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/46_BurdujaSebastianIoan.JPG" loading="lazy">
+                <span class="mp-name">Sebastian-Ioan Burduja</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/273_RusuSebastianMihai.JPG" loading="lazy">
+                <span class="mp-name">Sebastian-Mihai Rusu</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/183_MateiSergiuLucian.JPG" loading="lazy">
+                <span class="mp-name">Sergiu-Lucian Matei</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/76_ConstantinescuSergiuMircea.JPG" loading="lazy">
+                <span class="mp-name">Sergiu-Mircea Constantinescu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/192_MihalceaSilviaClaudia.JPG" loading="lazy">
+                <span class="mp-name">Silvia-Claudia Mihalcea</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/105_FeodorSilviu.JPG" loading="lazy">
+                <span class="mp-name">Silviu Feodor</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/322_VexlerSilviu.JPG" loading="lazy">
+                <span class="mp-name">Silviu Vexler</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/230_OanceaSilviuFlorin.JPG" loading="lazy">
+                <span class="mp-name">Silviu-Florin Oancea</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/136_GurluiSilviuOctavian.JPG" loading="lazy">
+                <span class="mp-name">Silviu-Octavian Gurlui</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/240_PaunescuSilviuTitus.JPG" loading="lazy">
+                <span class="mp-name">Silviu-Titus Pãunescu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/40_BucuraOprescuSimona.JPG" loading="lazy">
+                <span class="mp-name">Simona Bucura-Oprescu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/175_MacoveiIlieSimonaElena.JPG" loading="lazy">
+                <span class="mp-name">Simona-Elena Macovei Ilie</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/244_PistruPopaSimonaGeanina.JPG" loading="lazy">
+                <span class="mp-name">Simona-Geanina Pistru-Popa</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/231_OltenasuSorinGeorge.JPG" loading="lazy">
+                <span class="mp-name">Sorin-George Oltenaºu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/131_GrindeanuSorinMihai.JPG" loading="lazy">
+                <span class="mp-name">Sorin-Mihai Grindeanu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/210_MuncaciuSorinTitus.JPG" loading="lazy">
+                <span class="mp-name">Sorin-Titus Muncaciu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/149_IonStelianCristian.JPG" loading="lazy">
+                <span class="mp-name">Stelian-Cristian Ion</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/217_NagySzabolcs.JPG" loading="lazy">
+                <span class="mp-name">Szabolcs Nagy</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/25_BendeSandor.JPG" loading="lazy">
+                <span class="mp-name">Sándor Bende</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/167_LazarTeodor.JPG" loading="lazy">
+                <span class="mp-name">Teodor Lazãr</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/20_BarstanTiberiuClaudiu.JPG" loading="lazy">
+                <span class="mp-name">Tiberiu-Claudiu Barstan</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/35_BosutarTiberiuNicolae.JPG" loading="lazy">
+                <span class="mp-name">Tiberiu-Nicolae Boºutar</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/152_IonescuTudor.JPG" loading="lazy">
+                <span class="mp-name">Tudor Ionescu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/211_MunteanuValeriu.JPG" loading="lazy">
+                <span class="mp-name">Valeriu Munteanu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/6_AmetVarol.JPG" loading="lazy">
+                <span class="mp-name">Varol Amet</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/233_PambuccianVarujan.JPG" loading="lazy">
+                <span class="mp-name">Varujan Pambuccian</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/41_BudacaVasile.JPG" loading="lazy">
+                <span class="mp-name">Vasile Budacã</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/218_NagyVasile.JPG" loading="lazy">
+                <span class="mp-name">Vasile Nagy</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/290_SuciuVasileDaniel.JPG" loading="lazy">
+                <span class="mp-name">Vasile-Daniel Suciu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/319_VedinasVerginia.JPG" loading="lazy">
+                <span class="mp-name">Verginia Vedinaº</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/134_GrosuVeronica.JPG" loading="lazy">
+                <span class="mp-name">Veronica Grosu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/283_StanescuVetuta.JPG" loading="lazy">
+                <span class="mp-name">Vetuþa Stãnescu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/248_PontaVictorViorel.JPG" loading="lazy">
+                <span class="mp-name">Victor-Viorel Ponta</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/275_SanduViorica.JPG" loading="lazy">
+                <span class="mp-name">Viorica Sandu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/54_ChirilaVirgilAlin.JPG" loading="lazy">
+                <span class="mp-name">Virgil Alin Chirilã</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/323_VidraVladAndrei.JPG" loading="lazy">
+                <span class="mp-name">Vlad-Andrei Vidra</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/95_DrinceanuVladFlorentin.JPG" loading="lazy">
+                <span class="mp-name">Vlad-Florentin Drinceanu</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/293_SendroiuVladIoan.JPG" loading="lazy">
+                <span class="mp-name">Vlad-Ioan ªendroiu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/326_VuscanVoicu.JPG" loading="lazy">
+                <span class="mp-name">Voicu Vuºcan</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/195_MiklosZoltan.JPG" loading="lazy">
+                <span class="mp-name">Zoltán Miklós</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/330_ZakariasZoltan.JPG" loading="lazy">
+                <span class="mp-name">Zoltán Zakarias</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/37_BoudaStefan.JPG" loading="lazy">
+                <span class="mp-name">ªtefan Bouda</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/310_TintaStefan.JPG" loading="lazy">
+                <span class="mp-name">ªtefan Þintã</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/22_BaisanuStefanAlexandru.JPG" loading="lazy">
+                <span class="mp-name">ªtefan-Alexandru Bãiºanu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/288_StoicaStefanBucur.JPG" loading="lazy">
+                <span class="mp-name">ªtefan-Bucur Stoica</span>
+            </div>
+            <div class="mp-card" data-beard="true">
+                <img src="mp_images/172_LorinczStefanIulian.JPG" loading="lazy">
+                <span class="mp-name">ªtefan-Iulian Lõrincz</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/254_PopaStefanOvidiu.JPG" loading="lazy">
+                <span class="mp-name">ªtefan-Ovidiu Popa</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/13_AvramescuStefanitaAlin.JPG" loading="lazy">
+                <span class="mp-name">ªtefãniþã-Alin Avrãmescu</span>
+            </div>
+            <div class="mp-card" data-beard="false">
+                <img src="mp_images/85_CsepEvaAndrea.JPG" loading="lazy">
+                <span class="mp-name">Éva-Andrea Csép</span>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function applyFilter(type, btnElement) {
+            const cards = document.querySelectorAll('.mp-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+            
+            // Update button styles
+            buttons.forEach(btn => btn.classList.remove('active'));
+            btnElement.classList.add('active');
+
+            // Show/Hide cards
+            cards.forEach(card => {
+                if (type === 'all') {
+                    card.classList.remove('hidden');
+                } else if (type === 'beard') {
+                    if (card.getAttribute('data-beard') === 'true') {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                } else if (type === 'nobeard') {
+                    if (card.getAttribute('data-beard') === 'false') {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>
