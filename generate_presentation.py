@@ -269,6 +269,7 @@ if __name__ == "__main__":
     ]
     
     MEN_WITH_BEARD = [
+        "Iusein Ibram",
         "Cosmin-Ioan Corendea", "Csaba Könczei",
         "Alexandru Bordian", "Alin-Bogdan Stoica",
         "Andrei Csillag", "Alexandrin Moiseev", "Alexandru Rafila", "Alexandru-Florin Rogobete",
